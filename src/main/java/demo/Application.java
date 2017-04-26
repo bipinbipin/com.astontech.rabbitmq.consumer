@@ -22,7 +22,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @SpringBootApplication
 @EnableRabbit
-@EnableScheduling
+@EnableScheduling  //not needed
 public class Application implements RabbitListenerConfigurer {
 
     final static String queueName = "spring-boot";
