@@ -1,6 +1,6 @@
 package demo;
 
-import demo.respositories.MessageRepository;
+//import demo.respositories.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,8 +12,8 @@ import java.util.concurrent.CountDownLatch;
 @Component
 public class Receiver {
 
-    @Autowired
-    MessageRepository messageRepository;
+//    @Autowired
+//    MessageRepository messageRepository;
 
     private CountDownLatch latch = new CountDownLatch(1);
 
@@ -24,8 +24,8 @@ public class Receiver {
 
     public void writeMessage(MessagePOJO messagePOJO) {
         System.out.println("Message Received" + messagePOJO.toString());
-        messageRepository.save(messagePOJO);
-        System.out.println("Message Saved - ID: " + messagePOJO.getId());
+//        messageRepository.save(messagePOJO);
+//        System.out.println("Message Saved - ID: " + messagePOJO.getId());
     }
 
     public CountDownLatch getLatch() {
